@@ -100,4 +100,4 @@ class JustPayTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='D:\\smoke_test.html', report_name='Appium Test Summary', report_title='Automation Test Result'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='D:\\smoke_test.html', report_name='Ver 2.2.0', report_title='SPP V2 Smoke Test Result'))
