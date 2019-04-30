@@ -212,6 +212,21 @@ class JustPayTest(unittest.TestCase):
         self.driver.find_element_by_xpath("//android.widget.TextView[@text='Authorize']").click()
         time.sleep(5)
 
+    def test_g_searchBranch(self):
+        time.sleep(5)
+        self.driver.find_element_by_xpath("//android.widget.EditText[@text='PIN']").send_keys("123123")
+        self.driver.find_element_by_xpath("//android.widget.EditText[@bounds='[26,608][540,702]']").click()
+        self.driver.execute_script('mobile: performEditorAction', {'action': 'done'})
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Authorize']").click()
+        time.sleep(5)
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Menu']").click()
+        time.sleep(5)
+        self.driver.swipe(373, 1221, 373, 614)
+        time.sleep(10)
+        self.driver.tap([(515, 1025)])
+        time.sleep(5)
+        self.driver.find_element_by_xpath("//android.widget.EditText[@text='Search']").send_keys("Chokoria")
+
     def tearDown(self):
         self.driver.quit()
 
